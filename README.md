@@ -14,7 +14,7 @@ By this way, we can compress DNA sequences data in **4-8 times**.
 
 In order to use dna-data-compressor on a webpage, download dna-compressor.js from the web folder of this repository and include it in a script, like so (assuming it is in the same directory as your page):
 ```bash
-<script src="ntseq.js"></script>
+<script src="dna-compressor.js"></script>
 ```
 
 And use it, like so:
