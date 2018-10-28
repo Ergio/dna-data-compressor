@@ -1,16 +1,14 @@
 # DNA DATA COMPRESSOR
 **dna-data-compessor** is a small library, that can quick convert strings to binary data and vice versa. This method provide maximum level of DNA data compression (we suppose that allocation of nucleotides is random).<br />
 
-We can compress DNA sequences data in **4-8 times**. This can be useful for data transfering or fast data analysis of DNA.<br />
-<br />
-
+This can be useful for data transfering or fast data analysis of DNA.<br />
 So, every nucleotide is encoded by 2 bytes (UTF-16), in some cases - 1  byte (ASCII, UTF-8).
 But, actualy, we need just two bits to encode one nucleotide. For example:<br />
       A - 00<br />
       C - 01<br />
       G - 10<br />
       T - 11<br />
-
+By this way, we can compress DNA sequences data in **4-8 times**.
 
 ## Web
 
