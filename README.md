@@ -34,6 +34,7 @@ const compressor = require('../path/dna-data-compressor.umd');
 ```
 
 ## Usage
+```bash
 // Some DNA sequence
 const sequence = 'ATTGGTACGACTGCAGCTGCATATTATAATGATCGATCGATCGTAC'
 
@@ -42,7 +43,8 @@ const buffer = compressor.sequenceToBinaryData(sequence);
 
 // Decompess binary data to string
 const decompressed = compressor.binaryDataToSequence(buffer);
-
+```
+  
 ## NPM scripts
 
  - `npm test`: Run simple test (test folder)
