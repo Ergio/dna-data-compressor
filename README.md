@@ -37,7 +37,7 @@ const compressor = require('../path/dna-data-compressor.umd');
 // Some DNA sequence
 const sequence = 'ATTGGTACGACTGCAGCTGCATATTATAATGATCGATCGATCGTAC'
 
-// Copress string to binary data (ArrayBuffer)
+// Compress string to binary data (ArrayBuffer)
 const buffer = compressor.sequenceToBinaryData(sequence);
 
 // Decompess binary data to string
