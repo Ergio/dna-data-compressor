@@ -1,0 +1,45 @@
+{
+  "name": "dna-data-compressor",
+  "version": "0.0.1",
+  "description": "DNA data compressor - tool for fast compressing and decompressing DNA sequence data.",
+    "keywords": [
+    "nucleotide",
+    "nucleic",
+    "acid",
+    "dna",
+	"compression",
+	"archivation",
+    "sequence",
+    "bioinformatics",
+    "biotechnology",
+    "computational",
+    "biology",
+    "genomics",
+    "gene",
+    "biojs"
+  ],
+  "main": "dist/dna-data-compressor.umd.js",
+  "module": "dist/dna-data-compressor.es5.js",
+  "typings": "dist/types/dna-data-compressor.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "Serhii Silov <serhiisilov@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^10.11.0",
+    "tslint": "^5.11.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  }
+}

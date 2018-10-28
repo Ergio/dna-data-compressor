@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sample NtSeq Project</title>
+  <script src="dna-compressor.js"></script>
+  <style>
+    body{
+      padding: 20px;
+    }
+    #input {
+      width: 100%;
+    }
+    #output {
+      white-space: pre-line;
+    }
+    .message{
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>DNA DATA COMPRESSOR</h2>
+  <div>Enter DNA sequence:</div>
+  <textarea id="input" rows="6" cols="50"></textarea><br>
+  <button id="compress-btn">Compress</button>
+  <div id="output"></div>
+</body>
+<script>
+  // Create a basic print function
+  function print(str) {
+    var el = document.getElementById('output');
+    var p = document.createElement("div");
+    p.className = 'message';
+    p.innerHTML += str + '\n' + '\n'
+    el.appendChild(p)
+  };
+  function clear() {
+      var el = document.getElementById('output');
+      el.innerHTML = '';
+    };
+  function compress() {
+    clear();
+    const compressor = new Compressor();
+    const sequence = document.getElementById('input').value;
+
+    print(`Input data (DNA sequence): ${sequence}.`);
+    print(`Input data size: ${sequence.length} bytes.`);
+
+
+    const buffer = compressor.sequenceToBinaryData(sequence);
+
+
+    const binaryHandler = new Uint8Array(buffer);
+    print(`Compressed data (Uint8Array): ${binaryHandler}`);
+    print(`Compressed data size: ${binaryHandler.length} bytes.`);
+
+
+    const decompressed = compressor.binaryDataToSequence(buffer);
+
+    print(`Decompressed data: ${decompressed}`);
+
+
+  };
+  document.getElementById('compress-btn').addEventListener('click', compress);
+</script>
+
+</html>
