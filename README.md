@@ -4,11 +4,11 @@ We can compress DNA sequences data in 4-8 times. This can be useful for data tra
 
 So, every nucleotide is encoded by 2 bytes (UTF-16), in some cases - 1  byte (ASCII, UTF-8).
 
-But, actualy, we need just two bits to encode one nucleotide. For example:
-      A - 00
-      C - 01
-      G - 10
-      T - 11
+But, actualy, we need just two bits to encode one nucleotide. For example:<br />
+      A - 00<br />
+      C - 01<br />
+      G - 10<br />
+      T - 11<br />
 dna-data-compessor is a small library, that can quick convert strings to binary data and vice versa. This method provide maximum level of DNA data compression (we suppose that allocation of nucleotides is random).
 
 ## Web
